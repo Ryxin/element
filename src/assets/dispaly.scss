@@ -1,0 +1,68 @@
+.hidden {
+    // 当视口在 xs 尺寸时隐藏
+    &-xs-only {
+        @media only screen and (max-width: 768px - 1) {
+            display: none;
+        }
+    }
+    // 当视口在 sm 尺寸时隐藏
+    &-sm-only {
+        @media only screen and(min-width: 768px) and (max-width: 992px - 1) {
+            display: none;
+        }
+    }
+    // 当视口在 sm 及以下尺寸时隐藏
+    &-sm-and-down {
+        @media only screen and (min-width: 992px -1) {
+            display: none;
+        }
+    }
+    // 当视口在 sm 及以上尺寸时隐藏
+    &-sm-and-up {
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    // 当视口在 md 尺寸时隐藏
+    &-md-only {
+        @media only screen and(min-width: 992px) and (max-width: 1200px - 1) {
+            display: none;
+        }
+    }
+    // 当视口在 md 及以下尺寸时隐藏
+    &-md-and-down {
+        @media only screen and (min-width: 1200px -1) {
+            display: none;
+        }
+    }
+    // 当视口在 md 及以上尺寸时隐藏
+    &-md-and-up {
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+    // 当视口在 lg 尺寸时隐藏
+    &--lg-only {
+        @media only screen and(min-width: 1200px) and (max-width: 1920px - 1) {
+            display: none;
+        }
+    }
+    // 当视口在 lg 及以下尺寸时隐藏
+    &-lg-and-down {
+        @media only screen and (min-width: 1920px -1) {
+            display: none;
+        }
+    }
+    // 当视口在 lg 及以上尺寸时隐藏
+    &-lg-and-up {
+        @media only screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+    // 当视口在 xl 尺寸时隐藏
+    &-xl-only {
+        @media only screen and(min-width: 1920px) {
+            display: none;
+        }
+    }
+}
