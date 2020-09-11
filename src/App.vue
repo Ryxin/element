@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>基础布局</h1>
-    <el-row>
-      <el-col :span="24">
+    <el-row tag="h1">
+      <el-col :span="24" tag="p">
         <div class="grid-content bg-purple-dark"></div>
       </el-col>
     </el-row>
@@ -208,30 +208,31 @@
     </el-row>
     <h1>基于断点的隐藏类</h1>
     <el-col class="hidden-xs-only" :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
-        <div class="grid-content bg-purple"></div>
-      </el-col>
+      <div class="grid-content bg-purple"></div>
+    </el-col>
   </div>
 </template>
 
 <script>
-import elRow from '@element/Row.vue';
-import elCol from '@element/Col.vue';
+// import elRow from '@element/Row.js';
+// import elCol from '@element/Col.js';
 
 export default {
   name: 'app',
-  components: {
-    elRow,
-    elCol,
-  },
+  // components: {
+  //   // elRow,
+  //   // elCol,
+  // },
 };
 </script>
 
 <style lang="scss">
-@import '@/assets/dispaly.scss';
+@import "@/assets/index.scss";
+@import "@/assets/dispaly.scss";
 
 #app {
   margin-bottom: 200px;
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .el-row {
   margin-bottom: 20px;
