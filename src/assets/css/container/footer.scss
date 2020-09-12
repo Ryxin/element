@@ -1,0 +1,5 @@
+.el-footer {
+    box-sizing: border-box; // IE混杂盒模型
+    padding: 0 20px;
+    flex-shrink: 0; // 保证盒子不被压缩
+}

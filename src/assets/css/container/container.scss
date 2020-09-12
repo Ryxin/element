@@ -1,0 +1,9 @@
+.el-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row; //水平排列
+    flex: 1;
+    &.is-vertical {
+        flex-direction: column; // 列排列
+    }
+}

@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <h1>基础布局</h1>
-    <el-row tag="h1">
+    <h1 style="color:red">Layout布局</h1>
+    <h3>基础布局</h3>
+    <el-row>
       <el-col :span="24" tag="p">
         <div class="grid-content bg-purple-dark"></div>
       </el-col>
@@ -59,7 +60,7 @@
         <div class="grid-content bg-purple-light"></div>
       </el-col>
     </el-row>
-    <h1>分栏间隔</h1>
+    <h3>分栏间隔</h3>
     <el-row :gutter="20">
       <el-col :span="6">
         <div class="grid-content bg-purple"></div>
@@ -74,7 +75,7 @@
         <div class="grid-content bg-purple"></div>
       </el-col>
     </el-row>
-    <h1>混合布局</h1>
+    <h3>混合布局</h3>
     <el-row :gutter="20">
       <el-col :span="16">
         <div class="grid-content bg-purple"></div>
@@ -108,7 +109,7 @@
         <div class="grid-content bg-purple"></div>
       </el-col>
     </el-row>
-    <h1>分栏偏移</h1>
+    <h3>分栏偏移</h3>
     <el-row :gutter="20">
       <el-col :span="6">
         <div class="grid-content bg-purple"></div>
@@ -130,7 +131,7 @@
         <div class="grid-content bg-purple"></div>
       </el-col>
     </el-row>
-    <h1>对齐方式</h1>
+    <h3>对齐方式</h3>
     <p>默认左对齐</p>
     <el-row type="flex" class="row-bg">
       <el-col :span="6">
@@ -191,7 +192,7 @@
         <div class="grid-content bg-purple"></div>
       </el-col>
     </el-row>
-    <h1>响应式布局</h1>
+    <h3>响应式布局</h3>
     <el-row :gutter="10">
       <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
         <div class="grid-content bg-purple"></div>
@@ -206,30 +207,89 @@
         <div class="grid-content bg-purple-light"></div>
       </el-col>
     </el-row>
-    <h1>基于断点的隐藏类</h1>
+    <h3>基于断点的隐藏类</h3>
     <el-col class="hidden-xs-only" :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
       <div class="grid-content bg-purple"></div>
     </el-col>
+    <br/>
+    <br/>
+     <h1 style="color:red">Container 容器</h1>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-main>Main</el-main>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-header height="200px">Header</el-header>
+        <el-main>Main</el-main>
+        <el-footer height="200px">Footer</el-footer>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>Main</el-main>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-container>
+          <el-aside width="200px">Aside</el-aside>
+          <el-main>Main</el-main>
+        </el-container>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-container>
+          <el-aside width="200px">Aside</el-aside>
+          <el-container>
+            <el-main>Main</el-main>
+            <el-footer>Footer</el-footer>
+          </el-container>
+        </el-container>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+          <el-header>Header</el-header>
+          <el-main>Main</el-main>
+        </el-container>
+      </el-container>
+      <br/>
+      <hr/>
+      <br/>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+          <el-header>Header</el-header>
+          <el-main>Main</el-main>
+          <el-footer height="80px">Footer</el-footer>
+        </el-container>
+      </el-container>
   </div>
 </template>
 
 <script>
 // import elRow from '@element/Row.js';
 // import elCol from '@element/Col.js';
-
 export default {
   name: 'app',
-  // components: {
-  //   // elRow,
-  //   // elCol,
-  // },
 };
 </script>
 
 <style lang="scss">
-@import "@/assets/index.scss";
-@import "@/assets/dispaly.scss";
-
+@import "@/assets/css/index.scss";
 #app {
   margin-bottom: 200px;
   box-sizing: border-box;
@@ -260,4 +320,38 @@ export default {
   padding: 10px 0;
   background-color: #f9fafc;
 }
+// Container 容器
+.el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+  
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
 </style>
