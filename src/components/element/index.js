@@ -6,8 +6,9 @@ import Header from "@element/header"
 import Footer from "@element/footer"
 import Main from "@element/main"
 import Aside from "@element/aside"
+import Icon from "@element/icon"
 
-const elements = [Row, Col, Container, Header, Footer, Main, Aside];
+const elements = [Row, Col, Container, Header, Footer, Main, Aside, Icon];
 // 添加install方法 
 const install = (Vue) => {
     //  循环组件
@@ -24,7 +25,8 @@ export default {
     Header,
     Footer,
     Main,
-    Aside
+    Aside,
+    Icon
 };
 // 按需导出
 export {
@@ -35,5 +37,6 @@ export {
     Header,
     Footer,
     Main,
-    Aside
+    Aside,
+    Icon
 };
